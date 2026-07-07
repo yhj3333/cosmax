@@ -359,7 +359,13 @@
   .country-toggle input { display: none; }
 
   .country-flag { display: inline-flex; align-items: center; }
-  .country-flag svg { width: 28px; height: auto; overflow: visible; }
+  .country-flag img {
+    width: 34px;
+    height: 24px;
+    object-fit: contain;
+    transform: rotate(-4deg);
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18));
+  }
 
   .country-label {
     font-weight: 700;
@@ -682,48 +688,7 @@
       <label class="country-toggle active" data-country="KR">
         <input type="checkbox" checked />
         <span class="country-flag">
-          <svg viewBox="0 0 36 26" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="대한민국 국기">
-            <defs>
-              <clipPath id="kr-wave">
-                <path d="M2,4 C9,1 16,7 22,3 C27,0 31,5 34,2 L34,20 C31,23 27,18 22,21 C16,25 9,19 2,22 Z"/>
-              </clipPath>
-              <filter id="kr-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0.3" dy="0.6" stdDeviation="0.4" flood-color="#000" flood-opacity="0.25"/>
-              </filter>
-            </defs>
-            <g filter="url(#kr-shadow)">
-              <g clip-path="url(#kr-wave)">
-                <g transform="translate(2,2) scale(1.0667,1.05)">
-                  <rect width="30" height="20" fill="#fff"/>
-                  <g transform="translate(15,10)">
-                    <path d="M0,-5 A2.5,2.5 0 0,1 0,0 A2.5,2.5 0 0,0 0,5 A5,5 0 0,1 0,-5 Z" fill="#cd2e3a"/>
-                    <path d="M0,5 A2.5,2.5 0 0,1 0,0 A2.5,2.5 0 0,0 0,-5 A5,5 0 0,1 0,5 Z" fill="#0047a0"/>
-                  </g>
-                  <g stroke="#000" stroke-width="0.6">
-                    <line x1="2.8" y1="3" x2="7.2" y2="3"/>
-                    <line x1="2.8" y1="4.3" x2="7.2" y2="4.3"/>
-                    <line x1="2.8" y1="5.6" x2="7.2" y2="5.6"/>
-                    <line x1="22.8" y1="14.4" x2="24.7" y2="14.4"/>
-                    <line x1="25.3" y1="14.4" x2="27.2" y2="14.4"/>
-                    <line x1="22.8" y1="15.7" x2="24.7" y2="15.7"/>
-                    <line x1="25.3" y1="15.7" x2="27.2" y2="15.7"/>
-                    <line x1="22.8" y1="17" x2="24.7" y2="17"/>
-                    <line x1="25.3" y1="17" x2="27.2" y2="17"/>
-                    <line x1="22.8" y1="3" x2="24.7" y2="3"/>
-                    <line x1="25.3" y1="3" x2="27.2" y2="3"/>
-                    <line x1="22.8" y1="4.3" x2="27.2" y2="4.3"/>
-                    <line x1="22.8" y1="5.6" x2="24.7" y2="5.6"/>
-                    <line x1="25.3" y1="5.6" x2="27.2" y2="5.6"/>
-                    <line x1="2.8" y1="14.4" x2="7.2" y2="14.4"/>
-                    <line x1="2.8" y1="15.7" x2="4.7" y2="15.7"/>
-                    <line x1="5.3" y1="15.7" x2="7.2" y2="15.7"/>
-                    <line x1="2.8" y1="17" x2="7.2" y2="17"/>
-                  </g>
-                </g>
-              </g>
-              <path d="M2,4 C9,1 16,7 22,3 C27,0 31,5 34,2 L34,20 C31,23 27,18 22,21 C16,25 9,19 2,22 Z" fill="none" stroke="#e2e2e2" stroke-width="0.5"/>
-            </g>
-          </svg>
+          <img src="__FLAG_KR_DATA_URI__" alt="대한민국 국기" />
         </span>
         <span class="country-label">한국<small>식약처(MFDS) 안전기준</small></span>
         <span class="check-mark">✓</span>
@@ -731,31 +696,7 @@
       <label class="country-toggle active" data-country="CN">
         <input type="checkbox" checked />
         <span class="country-flag">
-          <svg viewBox="0 0 36 26" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="중국 국기">
-            <defs>
-              <clipPath id="cn-wave">
-                <path d="M2,4 C9,1 16,7 22,3 C27,0 31,5 34,2 L34,20 C31,23 27,18 22,21 C16,25 9,19 2,22 Z"/>
-              </clipPath>
-              <filter id="cn-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0.3" dy="0.6" stdDeviation="0.4" flood-color="#000" flood-opacity="0.25"/>
-              </filter>
-            </defs>
-            <g filter="url(#cn-shadow)">
-              <g clip-path="url(#cn-wave)">
-                <g transform="translate(2,2) scale(1.0667,1.05)">
-                  <rect width="30" height="20" fill="#de2910"/>
-                  <g fill="#ffde00">
-                    <polygon points="7,2.4 7.588,4.191 9.473,4.197 7.951,5.309 8.528,7.103 7,6 5.472,7.103 6.049,5.309 4.527,4.197 6.412,4.191"/>
-                    <polygon points="10,1.1 10.202,1.722 10.856,1.722 10.327,2.106 10.529,2.728 10,2.344 9.471,2.728 9.673,2.106 9.144,1.722 9.798,1.722"/>
-                    <polygon points="12,3.3 12.202,3.922 12.856,3.922 12.327,4.306 12.529,4.928 12,4.544 11.471,4.928 11.673,4.306 11.144,3.922 11.798,3.922"/>
-                    <polygon points="12,5.9 12.202,6.522 12.856,6.522 12.327,6.906 12.529,7.528 12,7.144 11.471,7.528 11.673,6.906 11.144,6.522 11.798,6.522"/>
-                    <polygon points="10,8.1 10.202,8.722 10.856,8.722 10.327,9.106 10.529,9.728 10,9.344 9.471,9.728 9.673,9.106 9.144,8.722 9.798,8.722"/>
-                  </g>
-                </g>
-              </g>
-              <path d="M2,4 C9,1 16,7 22,3 C27,0 31,5 34,2 L34,20 C31,23 27,18 22,21 C16,25 9,19 2,22 Z" fill="none" stroke="#e2e2e2" stroke-width="0.5"/>
-            </g>
-          </svg>
+          <img src="__FLAG_CN_DATA_URI__" alt="중국 국기" />
         </span>
         <span class="country-label">중국<small>화장품 안전기술규범(NMPA)</small></span>
         <span class="check-mark">✓</span>
