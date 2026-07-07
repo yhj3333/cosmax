@@ -46,7 +46,7 @@ def _to_data_uri(filename: str, mime: str) -> str:
 
 
 html_content = html_content.replace("__FLAG_KR_DATA_URI__", _to_data_uri("flag-kr.png", "image/png"))
-html_content = html_content.replace("__FLAG_CN_DATA_URI__", _to_data_uri("flag-cn.jpg", "image/jpeg"))
+html_content = html_content.replace("__FLAG_CN_DATA_URI__", _to_data_uri("flag-cn.png", "image/png"))
 
 # 내용이 길고 동적으로 늘어날 수 있으므로 넉넉한 높이 + 내부 스크롤 허용
 st.iframe(html_content, height=2400)
