@@ -1,7 +1,6 @@
 import pathlib
 
 import streamlit as st
-import streamlit.components.v1 as components
 
 # ---- 페이지 기본 설정 ----
 st.set_page_config(
@@ -37,4 +36,4 @@ HTML_PATH = pathlib.Path(__file__).parent / "RegulFit.html"
 html_content = HTML_PATH.read_text(encoding="utf-8")
 
 # 내용이 길고 동적으로 늘어날 수 있으므로 넉넉한 높이 + 내부 스크롤 허용
-components.html(html_content, height=2400, scrolling=True)
+st.iframe(html_content, height=2400)
