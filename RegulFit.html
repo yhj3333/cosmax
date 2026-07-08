@@ -1063,23 +1063,3 @@
     return div.innerHTML;
   }
 </script>
-
-<script>
-  // Streamlit iframe에 고정 height가 박혀 있어 실제 콘텐츠보다 훨씬 크면 하단 여백이 생김.
-  // 콘텐츠 높이에 맞춰 iframe 자체 높이를 동적으로 조정.
-  (function () {
-    function fitFrameHeight() {
-      if (window.frameElement) {
-        window.frameElement.style.height = document.documentElement.scrollHeight + "px";
-      }
-    }
-    window.addEventListener("load", fitFrameHeight);
-    window.addEventListener("resize", fitFrameHeight);
-    new MutationObserver(fitFrameHeight).observe(document.body, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-    });
-    fitFrameHeight();
-  })();
-</script>

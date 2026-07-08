@@ -35,5 +35,5 @@ st.markdown(
 HTML_PATH = pathlib.Path(__file__).parent / "RegulFit.html"
 html_content = HTML_PATH.read_text(encoding="utf-8")
 
-# 내용이 길고 동적으로 늘어날 수 있으므로 넉넉한 높이 + 내부 스크롤 허용
-st.iframe(html_content, height=2400)
+# height="content"로 두면 실제 렌더링된 HTML 높이에 맞춰 iframe이 자동으로 조정됨
+st.iframe(html_content, height="content")
